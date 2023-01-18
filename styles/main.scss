@@ -1,0 +1,120 @@
+//Heading Fonts Size
+$enable-responsive-font-sizes: true;
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 3; //48px
+$h2-font-size: $font-size-base * 2.5; //40px
+$h3-font-size: $font-size-base * 2.1875; //35px
+$h4-font-size: $font-size-base * 1.875; //30px
+$h5-font-size: $font-size-base * 1.5; //24
+$h6-font-size: $font-size-base * 1.375; //22
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 1.5rem,
+  //paragraph font size
+  5: 1.375rem,
+  //22
+  6: 1.25rem,
+  //20
+);
+
+$display-font-weight: 300;
+// fw-bold 700
+// fw-normal 400
+// fw-semibold 600
+
+// for px-1 mx-1 etc
+// $spacer: 1rem !default;
+// $spacers: (
+//   0: 0,
+//   1: $spacer * 0.25,
+//   2: $spacer * 0.3,
+//   3: $spacer * 0.7,
+//   //changed
+//   4: $spacer * 1.5,
+//   5: $spacer * 3,
+// ) !default;
+
+//custom variables
+$primary: #f5f5f7;
+$secondary: #f5f5f7;
+$warning: #fed73a;
+$newColor: #e5d1f4;
+// $primarydark: #340458;
+$warninglight: #a1a09a;
+//hero component
+// $accordion-bg: black;
+// $accordion-color: rgb(220, 30, 30);
+// $accordion-button-active-bg: black;
+$accordion-button-active-color: black;
+// $accordion-border-color: black;
+
+@import '../node_modules/bootstrap/scss/_functions';
+@import '../node_modules/bootstrap/scss/_variables';
+
+// custom colors
+$custom-theme-colors: (
+  'newColor': $newColor,
+  'warninglight': $warninglight,
+  // 'primarydark': $primarydark,,,,,,,,,,,,,,
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+$carousel-indicator-width: 10px;
+$carousel-indicator-height: 10px;
+
+$carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+$carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+
+// .carousel-item.active,
+// .carousel-item-next,
+// .carousel-item-prev {
+//   display: none !important;
+// }
+
+a {
+  // color: inherit !important;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+:root {
+  --bs-body-font-family: 'Poppins';
+}
+$font-family: var(--bs-body-font-family);
+
+// .aboutUsAccordion {
+//   --#{$prefix}accordion-color: #{$accordion-color1};
+//   --#{$prefix}accordion-bg: #{$accordion-bg1};
+//   --#{$prefix}accordion-transition: #{$accordion-transition};
+//   --#{$prefix}accordion-border-color: #{$accordion-border-color};
+//   --#{$prefix}accordion-border-width: #{$accordion-border-width};
+//   // --#{$prefix}accordion-border-radius: #{$accordion-border-radius};
+//   // --#{$prefix}accordion-inner-border-radius: #{$accordion-inner-border-radius};
+//   --#{$prefix}accordion-btn-padding-x: #{$accordion-button-padding-x};
+//   --#{$prefix}accordion-btn-padding-y: #{$accordion-button-padding-y};
+//   --#{$prefix}accordion-btn-color: #{$accordion-button-color};
+//   --#{$prefix}accordion-btn-bg: #{$accordion-button-bg};
+//   --#{$prefix}accordion-btn-icon: #{url('data:image/svg+xml,<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.48 12.48H12.4V20.76H8.16V12.48H0.0800002V8.64H8.16V0.359998H12.4V8.64H20.48V12.48Z" fill="white"/></svg>')};
+//   --#{$prefix}accordion-btn-icon-width: #{$accordion-icon-width};
+//   // --#{$prefix}accordion-btn-icon-transform: #{$accordion-icon-transform};
+//   --#{$prefix}accordion-btn-icon-transition: #{$accordion-icon-transition};
+//   --#{$prefix}accordion-btn-active-icon: #{url('data:image/svg+xml,<svg width="17" height="15" viewBox="0 0 17 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.92 0.599999V4.44H0.48V0.599999H16.92Z" fill="white"/></svg>')};
+//   // --#{$prefix}accordion-btn-focus-border-color: #{$accordion-button-focus-border-color};
+//   // --#{$prefix}accordion-btn-focus-box-shadow: #{$accordion-button-focus-box-shadow};
+//   --#{$prefix}accordion-body-padding-x: #{$accordion-body-padding-x};
+//   --#{$prefix}accordion-body-padding-y: #{$accordion-body-padding-y};
+//   --#{$prefix}accordion-active-color: #{$accordion-button-active-color1};
+//   --#{$prefix}accordion-active-bg: #{$accordion-button-active-bg1};
+// }
