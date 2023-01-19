@@ -6,10 +6,7 @@ function AboutUs() {
     <Container className="my-5 text-center">
       <h1 className="">About Us</h1>
       <p className="lead">
-        lorem impsum loremlorem impsum loremlorem impsum loremlorem impsum
-        loremlorem impsum loremlorem impsum loremlorem impsum loremlorem impsum
-        loremlorem impsum loremlorem impsum loremlorem impsum loremlorem impsum
-        loremlorem impsum loremlorem impsum loremlorem impsum loremlorem impsum
+        lolli
         loremlorem impsum loremlorem impsum lorem{' '}
       </p>
     </Container>
