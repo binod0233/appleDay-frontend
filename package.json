@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "yarn": "^1.22.19",
     "@next/font": "13.1.1",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.3",

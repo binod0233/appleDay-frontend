@@ -17,6 +17,6 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ftp.xphonenepal.com
-          username: apple_day@xphonenepal.com
-          password: h&YUp$^sC7h&z1REHx&q7sQJS34jym3#H#WYDJaragbjh^$a*Z1@8x*QWHej
+          server: ${{ SECRETS.SERVER }}
+          username: ${{ SECRETS.USERNAME }}
+          password: ${{ SECRETS.PASSWORD }}
