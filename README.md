@@ -1,6 +1,5 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-
 ## CD status
 [![🚀 Deploy to cpanel](https://github.com/xenSlayer/appleDay-frontend/actions/workflows/main.yml/badge.svg)](https://github.com/xenSlayer/appleDay-frontend/actions/workflows/main.yml)
 
