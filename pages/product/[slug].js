@@ -76,7 +76,7 @@ const SpecificBlog = ({ productRes }) => {
 
 export async function getStaticPaths() {
   const product = await fetch(
-    'https://ecommerce-backend-s4ww.onrender.com/api/categories'
+    'https://xphone-backend.onrender.com/api/categories'
   );
   const allProduct = await product.json();
   return {
@@ -91,7 +91,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const categories = await fetch(
-    `https://ecommerce-backend-s4ww.onrender.com/api/categories/${params.slug}?populate=deep`
+    `https://xphone-backend.onrender.com/api/categories/${params.slug}?populate=deep`
   );
   const categoriesData = await categories.json();
 

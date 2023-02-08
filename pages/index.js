@@ -246,12 +246,12 @@ export default function Home({ productRes, homeRes }) {
 
 export const getStaticProps = async () => {
   const categories = await fetch(
-    'https://ecommerce-backend-s4ww.onrender.com/api/categories?populate=deep'
+    'https://xphone-backend.onrender.com/api/categories?populate=deep'
   );
   const categoriesData = await categories.json();
 
   const home = await fetch(
-    'https://ecommerce-backend-s4ww.onrender.com/api/home?populate=deep'
+    'https://xphone-backend.onrender.com/api/home?populate=deep'
   );
   const homeData = await home.json();
 

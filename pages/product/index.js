@@ -68,7 +68,7 @@ export default Product;
 
 export const getStaticProps = async () => {
   const categories = await fetch(
-    'https://ecommerce-backend-s4ww.onrender.com/api/categories?populate=deep'
+    'https://xphone-backend.onrender.com/api/categories?populate=deep'
   );
   const categoriesData = await categories.json();
 
