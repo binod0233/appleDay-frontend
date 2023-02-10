@@ -133,7 +133,8 @@ const Footer = () => {
                 href="https://api.whatsapp.com/send?phone=+61481615807"
               >
                 <i className="bi bi-telephone-fill" />
-                &nbsp; 5454545454554
+                &nbsp; 9804682770
+
               </Link>
             </div>
           </div>

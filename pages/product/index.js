@@ -44,7 +44,7 @@ function Product({ productRes }) {
               </Link>
 
               <Card.Body className="text-center">
-                <h6>{item?.attributes?.title}</h6>
+                <h6>{item?.attributes?.model}</h6>
                 <p className="text-muted">{item?.attributes?.title}</p>
                 <p className="text-muted">Rs {item?.attributes?.price}</p>
                 <Button
