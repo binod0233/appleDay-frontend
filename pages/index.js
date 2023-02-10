@@ -37,6 +37,8 @@ export default function Home({ productRes, homeRes }) {
                 alt=""
                 width="1000"
                 height="800"
+                // layout="responsive"
+                style={{ objectFit: 'scale' }}
               />{' '}
             </div>
             <Carousel.Caption>

@@ -39,10 +39,12 @@ const SpecificBlog = ({ productRes }) => {
                     // }
                     src={item?.attributes?.url}
                     // src="/slider3.jpg"
-                    className="d-block mx-lg-auto img-fluid "
+                    // className="d-block mx-lg-auto img-fluid "
                     alt=""
                     width="800"
                     height="500"
+                    // layout="responsive"
+                    style={{ objectFit: 'cover' }}
                   />{' '}
                 </div>
                 <Carousel.Caption>

@@ -30,6 +30,7 @@ function CardComponent({ data }) {
                     className="px-md-5 py-md-2 img-fluid"
                     width="580"
                     height="780"
+                    style={{ objectFit: 'cover' }}
                   />
                 </Ratio>
               </div>
