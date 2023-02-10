@@ -38,6 +38,7 @@ function Product({ productRes }) {
                     alt=""
                     width="180"
                     height="130"
+                    style={{ objectFit: 'cover' }}
                   />
                 </Ratio>
               </Link>
@@ -48,7 +49,7 @@ function Product({ productRes }) {
                 <p className="text-muted">Rs {item?.attributes?.price}</p>
                 <Button
                   variant="newColor"
-                  href="https://www.facebook.com/appleday"
+                  href="https://www.facebook.com/profile.php?id=100090084823379"
                   target="_blank"
                   rel="noreferrer"
                 >

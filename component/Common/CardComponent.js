@@ -37,12 +37,12 @@ function CardComponent({ data }) {
             </Link>
 
             <Card.Body className="text-center">
-              <h6>{item?.attributes?.title}</h6>
+              <h6>{item?.attributes?.model}</h6>
               <p className="text-muted">{item?.attributes?.title}</p>
               <p className="text-muted">Rs {item?.attributes?.price}</p>
               <Button
                 variant="newColor"
-                href="https://www.facebook.com/appleday"
+                href="https://www.facebook.com/profile.php?id=100090084823379"
                 target="_blank"
                 rel="noreferrer"
               >

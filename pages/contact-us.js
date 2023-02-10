@@ -2,15 +2,16 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-
-function ContactUs() {
+import parse from 'html-react-parser';
+function ContactUs({ contactRes }) {
+  // console.log(contactRes);
   return (
     <Container>
       <div className="text-center my-4">
-        <h1>Contact Us</h1>
+        <h1>{contactRes?.content?.title}</h1>
         <p className="lead mb-5">
-          Need to get touch with us ? Either fill out the form with your inquiry
-          or find the company email you'd like to contact below.
+          {contactRes?.content?.paragraph &&
+            parse(contactRes?.content?.paragraph)}
         </p>
       </div>
       <Row className="my-md-5">
@@ -62,3 +63,17 @@ function ContactUs() {
 }
 
 export default ContactUs;
+
+export const getStaticProps = async () => {
+  const contact = await fetch(
+    'https://xphone-backend.onrender.com/api/contact-us?populate=deep'
+  );
+  const contactData = await contact.json();
+
+  return {
+    props: {
+      contactRes: contactData?.data?.attributes,
+    },
+    revalidate: 1,
+  };
+};

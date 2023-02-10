@@ -12,7 +12,7 @@ import {
 import Image from 'next/image';
 import parse from 'html-react-parser';
 const SpecificBlog = ({ productRes }) => {
-  console.log(productRes);
+  // console.log(productRes);
   return (
     <Container>
       <Row xs={1} md={2} className="my-3">
@@ -66,8 +66,16 @@ const SpecificBlog = ({ productRes }) => {
             <p> 64GB, Black</p>
             <p>Rs {productRes?.attributes?.price}</p>
             <p>Quantity: 1</p>
+            <p>{productRes?.attributes?.shortdescription}</p>
           </Stack>
-          <Button variant="newColor">Buy Now</Button>{' '}
+          <Button
+            variant="newColor"
+            href="https://www.facebook.com/profile.php?id=100090084823379"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Buy Now
+          </Button>
         </Col>
       </Row>
       <h2 className="text-center">Description</h2>

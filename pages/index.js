@@ -22,7 +22,7 @@ import Link from 'next/link';
 import CardComponent from '../component/Common/CardComponent';
 export default function Home({ productRes, homeRes }) {
   const [key, setKey] = useState('Recent');
-  // console.log(productRes);
+  // console.log(homeRes);
 
   return (
     <div>
@@ -54,29 +54,20 @@ export default function Home({ productRes, homeRes }) {
             <ListGroup defaultActiveKey="#link1" className=" ">
               <ListGroup.Item action href="#" className="bg-primary">
                 <i className="bi bi-list"></i>
-                <strong className="ms-1"> All Models </strong>
+                <strong className="ms-1"> All Categories </strong>
               </ListGroup.Item>
               <ListGroup.Item action className="ps-4 " href="#link2">
-                <i className="bi bi-phone"></i> iPhone 14
+                <i className="bi bi-phone"></i> Iphone
               </ListGroup.Item>
               <ListGroup.Item action className="ps-4 " href="#link3">
-                <i className="bi bi-phone"></i> iPhone 13
+                <i className="bi bi-watch"></i>Apple Watch
               </ListGroup.Item>{' '}
               <ListGroup.Item action className="ps-4 " href="#link4">
-                <i className="bi bi-phone"></i> iPhone 12
+                <i className="bi bi-laptop"></i> Macbook
               </ListGroup.Item>{' '}
               <ListGroup.Item action className="ps-4 " href="#link5">
-                <i className="bi bi-phone"></i> iPhone 11
+                <i className="bi bi-phone"></i> Airpod
               </ListGroup.Item>{' '}
-              <ListGroup.Item action className="ps-4 " href="#link6">
-                <i className="bi bi-phone"></i> iPhone X
-              </ListGroup.Item>
-              <ListGroup.Item action className="ps-4 " href="#link7">
-                <i className="bi bi-phone"></i> iPhone 8
-              </ListGroup.Item>
-              <ListGroup.Item action className="ps-4 " href="#link8">
-                <i className="bi bi-phone"></i> iPhone 7
-              </ListGroup.Item>
             </ListGroup>
           </Col>
 
@@ -89,66 +80,12 @@ export default function Home({ productRes, homeRes }) {
             >
               <Tab eventKey="Recent" title="Recent">
                 <Row xs={2} md={2} lg={3} className="g-4 h-100">
-                  {/* {productRes.map((item, idx) => {
-                    return (
-                      <Col key={idx} className="h-100">
-                        <Card className="bg-transparent border border-0 align-item-center h-100 ">
-                          <Image
-                            src={
-                              item?.attributes?.image?.data !== null &&
-                              item?.attributes?.image?.data[0]?.attributes?.url
-                            }
-                            className="d-block mx-lg-auto img-fluid "
-                            alt=""
-                            width="200"
-                            height="150"
-                          />
-                          <Card.Body className="text-center">
-                            <h6>{item?.attributes?.title}</h6>
-                            <p className="text-muted">
-                              {item?.attributes?.title}
-                            </p>
-                            <p className="text-muted">
-                              {item?.attributes?.price}
-                            </p>
-                            <Button variant="newColor">Buy Now</Button>{' '}
-                          </Card.Body>
-                        </Card>
-                      </Col>
-                    );
-                  })} */}
-                  <CardComponent data={productRes} />
+                  <CardComponent data={productRes?.slice(0, 6)} />
                 </Row>
               </Tab>
               <Tab eventKey="recomendation" title="Recomendation">
                 <Row xs={2} lg={3}>
-                  {/* {productRes.map((item, idx) => (
-                    <Col key={idx}>
-                      <Card className="bg-transparent border border-0 align-item-center">
-                        <Image
-                          src={
-                            item?.attributes?.image?.data !== null &&
-                            item?.attributes?.image?.data[0]?.attributes?.url
-                          }
-                          className="d-block mx-lg-auto img-fluid "
-                          alt=""
-                          width="200"
-                          height="150"
-                        />
-                        <Card.Body className="text-center">
-                          <h6>{item?.attributes?.title}</h6>
-                          <p className="text-muted">
-                            {item?.attributes?.title}
-                          </p>
-                          <p className="text-muted">
-                            {item?.attributes?.price}
-                          </p>
-                          <Button variant="newColor">Buy Now</Button>{' '}
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                  ))} */}
-                  <CardComponent data={productRes} />
+                  <CardComponent data={homeRes?.recomendation?.data} />
                 </Row>
               </Tab>
             </Tabs>
@@ -158,52 +95,39 @@ export default function Home({ productRes, homeRes }) {
       <section className="py-5 bg-light ">
         <Container>
           <Row className="text-center g-2">
-            <h2>Slogan</h2>
-            <p className="lead">Best Mobile Phone Seller In Nepal</p>
+            <h2>{homeRes?.slogan?.title}</h2>
+            <p className="lead">
+              {homeRes?.slogan?.paragraph && parse(homeRes?.slogan?.paragraph)}
+            </p>
           </Row>
         </Container>
       </section>
       <Container>
         <Row className="my-5 ">
-          <h2 className="text-center my-2">Models</h2>
+          <h2 className="text-center my-2">Categories</h2>
           <Tabs
-            defaultActiveKey="iphone-14"
+            defaultActiveKey="iphone"
             id="uncontrolled-tab-example"
             className="mb-3"
           >
-            <Tab eventKey="iphone-14" title="iPhone 14">
+            <Tab eventKey="iphone" title="iPhone ">
               <Row xs={2} md={3} lg={4}>
-                <CardComponent data={productRes} />
+                <CardComponent data={productRes?.slice(0, 16)} />
               </Row>
             </Tab>
-            <Tab eventKey="iphone-13" title=" iPhone 13">
+            <Tab eventKey="apple-watch" title=" Apple Watch">
               <Row xs={2} md={3} lg={4}>
-                <CardComponent data={productRes} />
+                <CardComponent data={productRes?.slice(0, 16)} />
               </Row>
             </Tab>
-            <Tab eventKey="iphone-12" title="iphone 12">
+            <Tab eventKey="macbook" title="MacBook">
               <Row xs={2} md={3} lg={4}>
-                <CardComponent data={productRes} />
+                <CardComponent data={productRes?.slice(0, 16)} />
               </Row>
             </Tab>
-            <Tab eventKey="iphone-11" title="iphone 11">
+            <Tab eventKey="airpod" title="Airpod">
               <Row xs={2} md={3} lg={4}>
-                <CardComponent data={productRes} />
-              </Row>
-            </Tab>
-            <Tab eventKey="iphone-x" title="iphone X">
-              <Row xs={2} md={3} lg={4}>
-                <CardComponent data={productRes} />
-              </Row>
-            </Tab>
-            <Tab eventKey="iphone-8" title="iphone 8">
-              <Row xs={2} md={3} lg={4}>
-                <CardComponent data={productRes} />
-              </Row>
-            </Tab>
-            <Tab eventKey="iphone-7" title="iphone 7">
-              <Row xs={2} md={3} lg={4}>
-                <CardComponent data={productRes} />
+                <CardComponent data={productRes?.slice(0, 16)} />
               </Row>
             </Tab>
           </Tabs>
@@ -248,7 +172,7 @@ export default function Home({ productRes, homeRes }) {
 
 export const getStaticProps = async () => {
   const categories = await fetch(
-    'https://xphone-backend.onrender.com/api/categories?populate=deep'
+    'https://xphone-backend.onrender.com/api/categories?populate=deep&sort=createdAt'
   );
   const categoriesData = await categories.json();
 

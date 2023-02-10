@@ -125,7 +125,7 @@ const Footer = () => {
               <div className="pb-3">
                 <Link href="mailto:info@cdrskillassessment.com">
                   <i className="bi bi-envelope-fill" />
-                  &nbsp; info@apple.com
+                  &nbsp; info@xphone.com
                 </Link>
               </div>
               <Link
@@ -141,7 +141,7 @@ const Footer = () => {
           <div className="d-flex flex-column flex-sm-row justify-content-center py-4 my-1 border-top ">
             <div>
               All rights reserved | Copyright © {new Date().getFullYear()}{' '}
-              <Link href="/">www.appleday.com</Link>
+              <Link href="/">www.xphonenepal.com</Link>
             </div>
           </div>
         </footer>
