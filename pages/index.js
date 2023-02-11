@@ -22,7 +22,9 @@ import Link from 'next/link';
 import CardComponent from '../component/Common/CardComponent';
 export default function Home({ productRes, homeRes }) {
   const [key, setKey] = useState('Recent');
-  // console.log(homeRes);
+  // const categoriesData = ;
+
+  // console.log(categoriesData);
 
   return (
     <div>
@@ -56,16 +58,16 @@ export default function Home({ productRes, homeRes }) {
                 <i className="bi bi-list"></i>
                 <strong className="ms-1"> All Categories </strong>
               </ListGroup.Item>
-              <ListGroup.Item action className="ps-4 " href="#link2">
+              <ListGroup.Item action className="ps-4 " href="/product">
                 <i className="bi bi-phone"></i> Iphone
               </ListGroup.Item>
-              <ListGroup.Item action className="ps-4 " href="#link3">
+              <ListGroup.Item action className="ps-4 " href="/product">
                 <i className="bi bi-watch"></i>Apple Watch
               </ListGroup.Item>{' '}
-              <ListGroup.Item action className="ps-4 " href="#link4">
+              <ListGroup.Item action className="ps-4 " href="/product">
                 <i className="bi bi-laptop"></i> Macbook
               </ListGroup.Item>{' '}
-              <ListGroup.Item action className="ps-4 " href="#link5">
+              <ListGroup.Item action className="ps-4 " href="/product">
                 <i className="bi bi-phone"></i> Airpod
               </ListGroup.Item>{' '}
             </ListGroup>
@@ -112,22 +114,40 @@ export default function Home({ productRes, homeRes }) {
           >
             <Tab eventKey="iphone" title="iPhone ">
               <Row xs={2} md={3} lg={4}>
-                <CardComponent data={productRes?.slice(0, 16)} />
+                <CardComponent
+                  data={productRes
+                    ?.filter((item) => item?.attributes?.category === 'iPhone')
+                    ?.slice(0, 16)}
+                />
               </Row>
             </Tab>
             <Tab eventKey="apple-watch" title=" Apple Watch">
               <Row xs={2} md={3} lg={4}>
-                <CardComponent data={productRes?.slice(0, 16)} />
+                <CardComponent
+                  data={productRes
+                    ?.filter(
+                      (item) => item?.attributes?.category === 'applewatch'
+                    )
+                    ?.slice(0, 16)}
+                />
               </Row>
             </Tab>
             <Tab eventKey="macbook" title="MacBook">
               <Row xs={2} md={3} lg={4}>
-                <CardComponent data={productRes?.slice(0, 16)} />
+                <CardComponent
+                  data={productRes
+                    ?.filter((item) => item?.attributes?.category === 'macbook')
+                    ?.slice(0, 16)}
+                />
               </Row>
             </Tab>
             <Tab eventKey="airpod" title="Airpod">
               <Row xs={2} md={3} lg={4}>
-                <CardComponent data={productRes?.slice(0, 16)} />
+                <CardComponent
+                  data={productRes
+                    ?.filter((item) => item?.attributes?.category === 'airpod')
+                    ?.slice(0, 16)}
+                />
               </Row>
             </Tab>
           </Tabs>

@@ -12,54 +12,58 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import parse from 'html-react-parser';
-import { CardComponent } from '../../component/Common/CardComponent';
+import CardComponent from '../../component/Common/CardComponent';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 function Product({ productRes }) {
+  console.log(productRes);
   return (
     <Container>
-      {/* <Breadcrumb>
-        <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-        <Breadcrumb.Item href="/shop">
-        Product</Breadcrumb.Item>
-        <Breadcrumb.Item active>iPhone</Breadcrumb.Item>
-      </Breadcrumb> */}
       <h1 className="text-dark my-5">All Products</h1>
-      <Row xs={2} md={3} lg={4}>
-        {productRes.map((item, idx) => (
-          <Col key={idx}>
-            <Card className="h-100 bg-transparent border border-0 align-item?.attributes-center">
-              <Link href={`/product/${item?.attributes?.slug}`}>
-                <Ratio aspectRatio={100}>
-                  <Image
-                    src={
-                      item?.attributes?.image?.data !== null &&
-                      item?.attributes?.image?.data[0]?.attributes?.url
-                    }
-                    className="px-md-5 py-md-2 img-fluid"
-                    alt=""
-                    width="180"
-                    height="130"
-                    style={{ objectFit: 'cover' }}
-                  />
-                </Ratio>
-              </Link>
 
-              <Card.Body className="text-center">
-                <h6>{item?.attributes?.model}</h6>
-                <p className="text-muted">{item?.attributes?.title}</p>
-                <p className="text-muted">Rs {item?.attributes?.price}</p>
-                <Button
-                  variant="newColor"
-                  href="https://www.facebook.com/profile.php?id=100090084823379"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Buy Now
-                </Button>{' '}
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-        {/* <CardComponent data={productRes} /> */}
+      <Row className="my-1 ">
+        <Tabs
+          defaultActiveKey="iphone"
+          id="uncontrolled-tab-example"
+          className="mb-3"
+        >
+          <Tab eventKey="iphone" title="iPhone ">
+            <Row xs={2} md={3} lg={4}>
+              <CardComponent
+                data={productRes?.filter(
+                  (item) => item?.attributes?.category === 'iPhone'
+                )}
+              />
+            </Row>
+          </Tab>
+          <Tab eventKey="apple-watch" title=" Apple Watch">
+            <Row xs={2} md={3} lg={4}>
+              <CardComponent
+                data={productRes?.filter(
+                  (item) => item?.attributes?.category === 'applewatch'
+                )}
+              />
+            </Row>
+          </Tab>
+          <Tab eventKey="macbook" title="MacBook">
+            <Row xs={2} md={3} lg={4}>
+              <CardComponent
+                data={productRes?.filter(
+                  (item) => item?.attributes?.category === 'macbook'
+                )}
+              />
+            </Row>
+          </Tab>
+          <Tab eventKey="airpod" title="Airpod">
+            <Row xs={2} md={3} lg={4}>
+              <CardComponent
+                data={productRes?.filter(
+                  (item) => item?.attributes?.category === 'airpod'
+                )}
+              />
+            </Row>
+          </Tab>
+        </Tabs>
       </Row>
     </Container>
   );
