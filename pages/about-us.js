@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Ratio } from 'react-bootstrap';
 import parse from 'html-react-parser';
+import Image from 'next/image';
 
 function AboutUs({ aboutRes }) {
   // console.log(aboutRes);
@@ -10,6 +11,18 @@ function AboutUs({ aboutRes }) {
       <p className="lead">
         {aboutRes?.content?.paragraph && parse(aboutRes.content?.paragraph)}
       </p>
+      <div>
+        <Ratio aspectRatio={50}>
+          <Image
+            src={aboutRes?.image?.data?.attributes?.url}
+            alt=""
+            className="px-md-5 py-md-2 img-fluid"
+            width="580"
+            height="780"
+            style={{ objectFit: 'cover' }}
+          />
+        </Ratio>
+      </div>
     </Container>
   );
 }

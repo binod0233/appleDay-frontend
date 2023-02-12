@@ -33,8 +33,12 @@ function Header() {
               <Button variant="outline-success">Search</Button>
             </Form>
             <Nav className="ms-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/product">Shop</Nav.Link>
+              <Nav.Link href="/">
+                <strong>Home </strong>
+              </Nav.Link>
+              <Nav.Link href="/product">
+                <strong>Shop </strong>
+              </Nav.Link>
               {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -48,8 +52,12 @@ function Header() {
             </NavDropdown> */}
             </Nav>
             <Nav>
-              <Nav.Link href="/about-us">About us</Nav.Link>
-              <Nav.Link href="/contact-us">Contact us</Nav.Link>
+              <Nav.Link href="/about-us">
+                <strong>About us </strong>
+              </Nav.Link>
+              <Nav.Link href="/contact-us">
+                <strong>Contact us</strong>
+              </Nav.Link>
 
               {/* <Nav.Link href="#">
               <i className="bi bi-heart position-relative ">

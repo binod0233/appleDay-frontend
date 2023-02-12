@@ -46,30 +46,30 @@ const Footer = () => {
               <h5>Categories</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-muted">
+                  <a href="/product" className="nav-link p-0 text-muted">
                     iphone
                   </a>
                 </li>
                 <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-muted">
+                  <a href="/product" className="nav-link p-0 text-muted">
                     Macbook
                   </a>
                 </li>
                 <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-muted">
+                  <a href="/product" className="nav-link p-0 text-muted">
                     Airpods
                   </a>
                 </li>
                 <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-muted">
+                  <a href="/product" className="nav-link p-0 text-muted">
                     Apple Watch
                   </a>
                 </li>
-                <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-muted">
+                {/* <li className="nav-item mb-2">
+                  <a href="/product" className="nav-link p-0 text-muted">
                     Ipad
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
 
@@ -77,33 +77,33 @@ const Footer = () => {
               <h5>USEFUL LINKS</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-muted">
+                  <a href="/" className="nav-link p-0 text-muted">
                     Home
                   </a>
                 </li>
                 <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-muted">
+                  <a href="/about-us" className="nav-link p-0 text-muted">
                     Privacy Policy
                   </a>
                 </li>
                 <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-muted">
+                  <a href="" className="nav-link p-0 text-muted">
                     Returns
                   </a>
                 </li>
                 <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-muted">
+                  <a href="/about-us" className="nav-link p-0 text-muted">
                     Term & Conditions
                   </a>
                 </li>
                 <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-muted">
+                  <a href="/contact-us" className="nav-link p-0 text-muted">
                     Contact Us
                   </a>
                 </li>
                 <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-muted">
-                    Latest News{' '}
+                  <a href="/product" className="nav-link p-0 text-muted">
+                    Product
                   </a>
                 </li>
               </ul>
@@ -120,21 +120,21 @@ const Footer = () => {
               />
               <div className="pb-3">
                 <i className=" bi bi-geo-alt-fill" />
-                Santinagar,Ktm
+                Tinkune,Ktm
               </div>
               <div className="pb-3">
-                <Link href="mailto:info@cdrskillassessment.com">
+                <Link href="mailto:xphonenepal2023@gmail.com">
                   <i className="bi bi-envelope-fill" />
-                  &nbsp; info@xphone.com
+                  xphonenepal2023
+                  <br /> @gmail.com
                 </Link>
               </div>
               <Link
                 style={{ textDecoration: 'none', color: '#203546' }}
-                href="https://api.whatsapp.com/send?phone=+61481615807"
+                href="https://api.whatsapp.com/send?phone=9804682770"
               >
                 <i className="bi bi-telephone-fill" />
                 &nbsp; 9804682770
-
               </Link>
             </div>
           </div>
